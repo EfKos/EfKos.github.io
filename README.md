@@ -4,4 +4,4 @@
 
 [Test_1](https://efkos.github.io/test_1/html/ "Тестовый сайт") - Это тест гитхаба
 
-[DecBase](efkos.github.io/Lending_Decbase/src/ "Проэкт лендинг") - Первый проэкт лендинг
+[DecBase](efkos.github.io/Lending_Decbase/src/ "Проект лендинг") - Первый проект лендинг
