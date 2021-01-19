@@ -3,38 +3,43 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
 	<title>DecBase</title>
 </head>
 <body>
-	<div class="container">
-	<main class="main">
-	<header class="header">
+	
+	<!--HEADER MAIN -->
 
+	<main id="main" class="main">
+		<div class="container-my">
+		<header class="header">
 			<div class="row header-row">
 				<div class="col-lg-2">
 					<a class="logo" href="#"><img src="img/logo.png" alt=""></a>
 				</div>
 
-				<div class="col-lg-8 offset-lg-2 d-flex justify-content-between align-items-center">
-					<a href="" class="header-link">home</a>
+					<div class="col-lg-7 offset-lg-3 d-flex justify-content-between align-items-center">
+					<a href="#main" class="header-link">home</a>
 					<a href="" class="header-link">project</a>
-					<a href="" class="header-link">service</a>
-					<a href="" class="header-link">about</a>
+					<a href="#service" class="header-link">service</a>
+					<a href="#about-us" class="header-link">about</a>
 					<a href="" class="header-link">blog</a>
 					<a href="" class="header-link">shop</a>
 					<a href="" class="header-link">contact</a>
-					<button class="header-btn">Sign Up</button>
+					<button class="header-btn" data-toggle="modal" data-target="#header-btn">Sign Up</button>
+					</div>
 				</div>
-			</div>
-
-	</header>
+			</header>
+		</div>
 	</main>
-	 <section class="header-modern">
+
+<!-- MODERN -->
+
+	<section class="header-modern">
+	 	<div class="container-my">
 	 	<div class="row">
 	 		 <div class="col-lg-6 d-flex align-content-center flex-wrap">
 	 		 	<h2 class="title-modern">MODERN INTERIOR</h2>
@@ -42,27 +47,179 @@
 	 		 	<p class="header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 	 		 	<button class="btn-title">contact</button>
 	 		 </div>
-	 		 <div class="col-lg-6">
-	 		 	<div class="box-img"><img class="img-page" src="img/1page.png" alt="интерьер"></div>
-	 		 	<div class="border-page"></div>
-
+	 		 <div class="col-lg-5 col-md-4 col-sm-3 col-xs-2">
+	 		 	<div class="box-img1">
+	 		 		<img class="img-page" src="img/1page.png" alt="интерьер">
+	 		 		<div class="border-page1"></div>
+	 		 	</div>
 	 		 </div>
 	 	</div>
-	 </section>
-	 <section class="service">
-	 	<div class="row">
-		 	<div class="col-lg-2">
+	 </div>
+	</section>
+
+<!-- SERVICE -->
+
+	 <section id="service" class="service">
+	 	<div class="container-my">
+	 	<div class="row service-row">
+		 	<div class="col-lg-4">
 		 		<h3 class="servise-title">WHAT WE DO</h3>
 		 		<h2 class="service-our">Our Service</h2>
-		 	</div>	
-		 	<div class="col-lg-1 offset-lg-9">
-		 		
 		 	</div>
+		 	<div class="service-btn-block col-lg-2 offset-lg-6 d-flex align-items-end justify-content-end">
+		 		<button class="service-btn-left d-flex align-items-center justify-content-center">
+		 			<img class="img-btn-left" src="img/Vector whit left.png" alt="">
+		 		<!--<img  src="img/Vector 2 left.png" alt="">-->
+		 		</button>
+				<button class="service-btn-right d-flex align-items-center justify-content-center">
+					<img class="img-btn-right" src="img/Vector white right.png" alt="">
+					<!--<img src="img/Vector 2.png" alt="">-->
+				</button>
+			</div>	
 		</div>
-		<div class="row">
-			
+		<div class="row d-flex justify-content-between align-items-center flex-lg-nowrap service-slider">
+			<div class="col-lg-4 service-block d-flex align-items-start flex-column justify-content-center img-1">
+				<h3>Interior Design</h3>
+				<p>Lorem ipsum dolor amet consectetur
+					adipiscing elit sed eiusmod tempor
+					incididunt ut labore.</p>
+			</div>
+			<div class="col-lg-4 service-block d-flex align-items-start flex-column justify-content-center img-2">
+				<h3>Architecture</h3>
+					<p>Lorem ipsum dolor amet consectetur
+					adipiscing elit sed eiusmod tempor
+					incididunt ut labore.</p>
+			</div>
+			<div class="col-lg-4 service-block d-flex align-items-start flex-column justify-content-center img-3">
+				<h3>Planning</h3>
+					<p>Lorem ipsum dolor amet consectetur
+					adipiscing elit sed eiusmod tempor
+					incididunt ut labore.</p>
+			</div>
+			<div class="col-lg-4 service-block d-flex align-items-start flex-column justify-content-center img-1">
+				<h3>Interior Design</h3>
+				<p>Lorem ipsum dolor amet consectetur
+					adipiscing elit sed eiusmod tempor
+					incididunt ut labore.</p>
+			</div>
 		</div>
-	 </section>
 	</div>
+	 </section>
+
+<!-- ABOUT US -->
+
+	 <section id="about-us" class="about-us">
+	 	<div class="container-my">
+	 		<div class="row">
+	 			<div class="col-lg-6"><div class="box-img2">
+	 		 		<img class="img-page" src="img/2page.png" alt="интерьер">
+	 		 		<div class="border-page2"></div>
+	 		 	</div>
+	 		 </div>
+	 			<div class="col-lg-5 offset-lg-1 about-title">
+	 			<h2>ABOUT US</h2>
+	 		 	<h3>Interioris The Will <br> of An Epoch Mextreo</h3>
+	 		 	<p>There are many variations of passages of Lorem Ipsum available,
+				but the majority have suffered alteration in some form injected
+				humour, or randomised words which don't look even slightly
+				believable.If you are going to use a passage of Lorem Ipsum,
+				sure there isn't anything embarrassing hidden the middleof text.
+				All the Lorem Ipsum generators on the Internettend to repeat
+				predefined chunks as necessary,making this the first true
+				generator on the Internet.</p>
+				<button class="btn-title">learn more</button>
+	 		 </div>
+	 		</div>
+	 	</div>
+	 </section>
+
+	 <!-- READ MORE -->
+
+	 <section class="read-more">
+	 	<div class="container-my">
+	 		<div class="row">
+	 			<div class="col-lg-5 offset-lg-1 d-flex flex-column justify-content-center">
+	 				<h3>Years Of Successful Working <br> The Market</h3>
+	 				<button class="btn-title">read more</button>
+	 			</div>
+	 			<div class="col-lg-6">
+	 				<div class="box-img3">
+	 		 		<img class="img-page" src="img/3page.png" alt="интерьер">
+	 		 		<div class="border-page3"></div>
+	 		 	</div>
+	 		</div>
+	 	</div>
+	 </section>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="header-btn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex align-items-center justify-content-center">
+       	<input class="modal-input" type="text" placeholder="Username">
+       	<input class="modal-input" type="password" placeholder="Password">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-send">SEND</button>
+      </div>
+    </div>
+  </div>
+</div>
+	 	
+
+	<script
+	  src="https://code.jquery.com/jquery-1.12.4.min.js"
+	  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	  crossorigin="anonymous"></script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  	<!-- Подключаем стили слайдер -->
+
+  	<link rel="stylesheet" href="../src/slick/slick.css">
+  	<link rel="stylesheet" href="slick/slick-theme.css">
+
+  	<!-- Подключаем библиотеку слайдер -->
+
+  	<script src="slick/slick.min.js" type="text/javascript"></script>
+
+  	<!-- Инициализируем слайдер -->
+
+  	<script>
+  		$(document).ready(function(){
+  $('.service-slider').slick({
+   infinite: true,
+  slidesToShow: 3,
+  	prevArrow: $('.service-btn-left'),
+	nextArrow: $('.service-btn-right'),
+  slidesToScroll: 1,
+  	 responsive: [
+ 	   {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+  });
+});
+
+  	</script>
 </body> 
 </html>
