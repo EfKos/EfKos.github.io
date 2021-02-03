@@ -1,0 +1,150 @@
+@media (max-width: 1440px) {
+	.container-my {
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+
+	.header-modern h1 {
+		font-size: 62px;
+	}
+
+	.header-modern p {
+		font-size: 16px;
+	}
+
+	.box-img1 {
+		display: block;
+		min-width: 517px;
+		height: 456px;
+
+	}
+
+	.img-page {
+		background-size: 100%;
+		width: 110%;
+		display: block;
+		margin: 0 auto; 
+	}
+
+	.box-img2 {
+		display: block;
+		width: 620px;
+		height: 656px;
+	}
+
+
+	.about-title h2 {
+		margin-left: 20px;
+	}
+
+	.about-title h3 {
+		font-size: 40px;
+		margin-left: 20px;
+	}
+
+	.about-title p {
+		font-size: 16px;
+		margin-left: 20px;
+	}
+
+	.about-title button {
+		margin-left: 20px;
+	}	
+
+
+	.box-img3 {
+		display: block;
+		width: 550px;
+		height: 600px;
+
+	}
+
+	.read-more h3 {
+		font-size: 40px;
+	}
+
+	.read-more img {
+		width: 550px;
+		height: 600px;
+	}
+
+	.roadmap h3 {
+		font-size: 40px;
+	}
+
+	.roadmap-icon img {
+		margin-top: 100px;
+		width: 120px;
+		height: 86px;
+	}
+
+	.roadmap-icon {
+
+	}
+
+	.dots::after {
+		left: 400px;
+	}
+
+	.dots:hover:after {
+		left: 400px;
+	}
+
+	.clients-title h3 {
+		font-size: 40px;
+
+	}
+
+	.clients-title h4 {
+		font-size: 16px;
+		
+	}
+
+	.clients-block span {
+		font-size: 12px;
+	}
+
+	.clients-block h3 {
+		padding-left: 40px;
+	}
+
+	.clients-block p {
+		font-size: 16px;
+		padding-left: 40px;
+	}
+
+	.news-title h3 {
+		font-size: 40px;
+	}
+
+	.img-page-news {
+		width: 450px;
+	}
+
+	.border-page-news {
+		width: 450px;
+		height: 310px;
+	}
+
+	.blog h4 {
+		font-size: 26px;
+	}
+
+	.blog p {
+		font-size: 16px;
+	}
+
+	.block-sign input {
+		width: 540px;
+	}
+
+	.quick-links-icons li {
+		margin-left: 5px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.container-my {
+		max-width: 900px;
+		margin: 0 auto;
+	}
