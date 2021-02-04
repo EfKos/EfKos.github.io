@@ -217,8 +217,8 @@
 	}
 
 	.box-img3 {
-		height: 426px;
-		width: 442px;
+		height: 450px;
+		width: 400px;
 	}
 
 	.border-page3 {
@@ -230,8 +230,8 @@
 	}
 
 	.read-more img {
-		width: 550px;
-		height: 600px;
+		width: 400px;
+		height: 450px;
 	}
 
 	.roadmap h3 {
@@ -259,9 +259,7 @@
 
 	.clients-title h3 {
 		font-size: 32px;
-
 	}
-
 
 
 	.clients-block span {
@@ -290,10 +288,127 @@
 		bottom: 150px;
 	}
 
+	.news-title h3 {
+		font-size: 40px;
+	}
+
+	.img-page-news {
+		width: 350px;
+	}
+
+	.border-page-news {
+		width: 340px;
+		height: 230px;
+	}
+
+	.blog h4 {
+		font-size: 20px;
+	}
+
+	.blog p {
+		font-size: 12px;
+	}
+
+	.block-sign input {
+		width: 300px;
+	}
+
+	.quick-links-icons {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.quick-links-icons li {
+		margin-bottom: 5px;
+	}
+
+	.menu-link a {
+		margin-right: 10px;
+	}
+
+	.menu-link button {
+		width: 97px;
+		height: 62px;
+	}
+
+}
+
+@media (max-width: 500px) {
+	.container-my {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+
+	.menu-link button {
+		width: 77px;
+		height: 32px;
+	}
+
+	.menu-link a {
+		margin: 10px 0;
+	}
+
+	.header-row {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.menu-link {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+	}
+
+	.header-logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 50px;
+	}
+
+	.header-modern-flex {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
 
+	.header-modern h1 {
+		text-align: center;
+		font-size: 40px;
+		line-height: 1.2;
+	}
 
+	.header-modern p {
+		text-align: center;
+		font-size: 14px;
+	}
 
+	.header-modern button {
+		margin-bottom: 30px;
+		margin-right: 50px;
+	}
+
+	.box-img1 {
+		display: block;
+		width: 300px;
+		height: 300px;
+	}
+
+	.img-page {
+	background-size: 100%;
+	margin: 0 auto; 
+	width: 350px;
+	border-radius: 80px 0;
+	
+	}
+
+	.border-page1 {
+		border-radius: 80px 0;
+		width: 340px;
+	}
 }
 
 
