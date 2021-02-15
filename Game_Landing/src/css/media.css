@@ -139,6 +139,10 @@
 		max-width: 98%;
 	}
 
+	h2 {
+		font-size: 30px;
+	}
+
 	html {
 		font-size: 7px;
 	}
