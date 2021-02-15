@@ -26,7 +26,7 @@ body {
 }
 
 h2 {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', sans-serif;
 	font-size: 8rem;
 	font-weight: 500;
 	letter-spacing: 3px;
@@ -34,7 +34,7 @@ h2 {
 }
 
 h3 {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', sans-serif;
 	font-size: 2.4rem;
 	font-weight: 500;
 	letter-spacing: 2px;
@@ -42,7 +42,7 @@ h3 {
 }
 
 h4 {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', sans-serif;
 }
 
 
@@ -241,7 +241,7 @@ h4 {
 }
 
 .title h1 {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', sans-serif;
 	font-size: 8rem;
 	letter-spacing: 3px;
 	color: #FFF;
@@ -249,7 +249,7 @@ h4 {
 }
 
 .title p {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', sans-serif;
 	font-size: 2.4rem;
 	color: #FFF;
 	letter-spacing: 2px;
@@ -359,7 +359,7 @@ h4 {
 }
 
 .about-text h3 {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', sans-serif;
 	font-size: 2.4rem;
 	font-weight: 500;
 	color: #FFFFFF;
@@ -370,7 +370,7 @@ h4 {
 }
 
 .about-text h2 {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', sans-serif;
 	font-size: 8rem;
 	font-weight: 500;
 	color: #FFFFFF;
@@ -498,7 +498,7 @@ h4 {
 
 }
 .acor-container label {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', sans-serif;
     cursor: pointer;
     position: relative;
     display: block;
@@ -740,7 +740,7 @@ h4 {
 }
 
 .quotes-feed-title h5 {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', sans-serif;
 	font-size: 2.4rem;
 	color: #FFB548;
 	font-weight: 500;

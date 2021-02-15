@@ -200,7 +200,7 @@
 	}
 
 	.about-text h2::after {
-		width: 400px;
+		width: 300px;
 	}
 
 	.about-text {
@@ -251,6 +251,14 @@
 
 	.system-text h2 {
 		font-size: 33px;
+	}
+
+	.sys-req-block {
+		padding: 20px;
+	}
+
+	.sys-req-block p {
+		width: 100%;
 	}
 
 	.quotes {
