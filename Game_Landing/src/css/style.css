@@ -19,6 +19,7 @@ button:focus {
 
 html {
 	font-size: 10px;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -31,6 +32,7 @@ h2 {
 	font-weight: 500;
 	letter-spacing: 3px;
 	color: #fff;
+	text-transform: uppercase;
 }
 
 h3 {
@@ -39,6 +41,7 @@ h3 {
 	font-weight: 500;
 	letter-spacing: 2px;
 	color: #fff;
+	text-transform: uppercase;
 }
 
 h4 {
@@ -194,7 +197,7 @@ h4 {
 
 .drop-menu {
 	width: 10%;
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 
@@ -926,4 +929,57 @@ h4 {
 }
 
 
+/* модальное окно */
+
+.modal {
+	display: none;
+	z-index: 10;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 40px 60px;
+	top: 0;
+	background-color: #FFB548;
+	width: 100%;
+	height: min-height300px;
+}
+
+
+.modal-content {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.modal-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	border:none;
+	color: #fff;
+	font-size: 40px;
+	background-color: #FFB548;
+}
+
+.modal-link {
+
+}
+
+.modal-link li {
+	list-style: none;
+	margin: 50px 0;
+}
+
+.modal-link a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.modal-link a:hover {
+	color: #000;
+	transition: ease-in-out 0.3s;
+}
 

@@ -19,6 +19,11 @@
 		max-width: 1140px;
 	}
 
+	.main-link {
+		width: 90%;
+		margin-left: 100px;
+	}
+
 	.about-text h3 {
 		width: 100%;
 	}
@@ -396,6 +401,10 @@
 		flex-direction: column;
 	}
 
+	.ul-link li {
+		margin: 10px 0;
+	}
+
 	.footer-link {
 		width: 100%;
 		justify-content: center;
@@ -421,5 +430,7 @@
 		font-size: 12px;
 		margin: 5px 0;
 	}
+
+
 
 }

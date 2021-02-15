@@ -12,6 +12,32 @@
 	<title>Game Landing</title>
 </head>
 <body>
+
+	<!-- Модальное окно -->
+		<div class="modal">
+			<div class="modal-block">
+				<div class="modal-content">
+					<button class="modal-close">&times;</button>
+					<ul class="modal-link">
+						<a href="">
+							<li class="modal-click">main</li>
+						</a>
+						<a href="">
+							<li class="modal-click">About</li>
+						</a>
+						<a href="">
+							<li class="modal-click">Game features</li>
+						</a>
+						<a href="">
+							<li class="modal-click">system requirement</li>
+						</a>
+						<a href="">
+							<li class="modal-click">quotes</li>
+						</a>
+					</ul>
+				</div>
+			</div>
+		</div>
 								<!-- HEADER -->
 	<header class="header">
 		<div class="container">
@@ -41,7 +67,7 @@
 					  </div>
 					</div>
 				</div>
-				<div class="drop-menu">
+				<div class="drop-menu modal-btn">
 					<a href=""><img src="img/menubtn.png" alt=""></a>
 				</div> 
 				<div class="game-icon">
@@ -286,6 +312,8 @@
 	</footer>
 
 
+		
+
 		<script src="../src/js/wow.min.js"></script>
 		<script type="text/javascript">
 			new WOW().init();
@@ -305,6 +333,19 @@
 			<!-- Fotorama from CDNJS, 19 KB -->
 			<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+			<script>
+				$(document).ready(function() {
+					$('.modal-btn').on('click', function(event) {
+						event.preventDefault();
+						$('.modal').fadeIn();	
+						});
+					$('.modal-close').on('click', function(event) {
+						event.preventDefault();
+						$('.modal').fadeOut();
+					});
+				});
+			</script>
 	</body>
 </html>
 
