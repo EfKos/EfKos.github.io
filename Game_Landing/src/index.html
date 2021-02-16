@@ -19,19 +19,19 @@
 				<div class="modal-content">
 					<button class="modal-close">&times;</button>
 					<ul class="modal-link">
-						<a href="">
+						<a href="#main">
 							<li class="modal-click">main</li>
 						</a>
-						<a href="">
+						<a href="#about">
 							<li class="modal-click">About</li>
 						</a>
-						<a href="">
+						<a href="#game-feature">
 							<li class="modal-click">Game features</li>
 						</a>
-						<a href="">
+						<a href="#system">
 							<li class="modal-click">system requirement</li>
 						</a>
-						<a href="">
+						<a href="#quotes">
 							<li class="modal-click">quotes</li>
 						</a>
 					</ul>
@@ -341,6 +341,10 @@
 						$('.modal').fadeIn();	
 						});
 					$('.modal-close').on('click', function(event) {
+						event.preventDefault();
+						$('.modal').fadeOut();
+					});
+					$('.modal-click').on('click', function(event) {
 						event.preventDefault();
 						$('.modal').fadeOut();
 					});

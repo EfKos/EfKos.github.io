@@ -209,6 +209,7 @@
 	}
 
 	.about-text h2::after {
+		display: none;
 		width: 300px;
 	}
 
