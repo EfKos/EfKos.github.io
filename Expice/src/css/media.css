@@ -1,0 +1,211 @@
+@media (max-width: 1680px){
+	
+										/* HEADER */
+
+	.container {
+		max-width: 85%;
+	}
+
+	.bg-red {
+		width: 28%;
+
+	}
+
+	.plate {
+		z-index: 5;
+		width: 100%;
+	}
+
+	.salad {
+		width: 80%;
+		left: 100px;
+	}
+
+	.header {
+		min-height: 924px;
+	}
+
+
+	.left-btn button {
+
+		margin-top: 100px;
+	
+	}
+}
+
+@media (max-width: 1440px) {
+
+								/* HEADER */
+
+	.container {
+		max-width: 85%;
+	}
+
+	.bg-red {
+		width: 25%;
+	}
+
+	.header-block-img {
+	width: 70%;
+	}
+
+	.salad {
+		width: 70%;
+		top: -120px;
+		left: 100px;
+	}
+
+}
+
+@media (max-width: 1195px) {
+
+								/* HEADER */
+	
+	html {
+		font-size: 8px;
+	}
+
+	.header {
+		min-height: 924px;
+
+	}
+
+	.container {
+		max-width: 95%;
+	}
+
+	.bg-red {
+	width: 302px;
+	}
+
+	.user-min-menu {
+		display: block;
+	}
+
+	.left-btn {
+	position: relative;
+	left: 140px;
+	}
+
+	.main-link {
+		display: none;
+	}
+
+	.user-img {
+		display: none;
+	}
+
+	.user-block a {
+		display: none;
+	}
+
+	.header-block-img {
+		width: 550px;
+	}
+
+	.header-block {
+		width: 100%;
+	}
+
+	.header-title {
+		width: 100%;
+	}
+
+	.header-input {
+		width: 462px;
+	}
+
+	.header-block-img {
+	width: 100%;
+	}
+
+	.salad {
+		top: -140px;
+	}
+
+}
+
+@media (max-width: 1024px) {
+
+							/* HEADER */
+
+	.bg-red {
+		width: 25%;		
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+							/* HEADER */
+
+	.header {
+		min-height: 600px;
+	}
+
+  .container {
+		margin: 0 auto;
+		padding: 0;
+		min-height: 600px;
+  }
+	.bg-red {
+		width: 25%;		
+  }
+
+  .main {
+  	margin-bottom: 20px;
+  }
+
+  html {
+  	font-size: 5px;
+  }
+
+  .block-menu {
+  	height:600px;
+  	width: 80%;
+  	flex direction: column;
+  }
+
+  .header-title {
+  	width: 100%;
+  }
+
+  .header-input {
+  	width: 420px;
+  	z-index: 10;
+  }
+
+  .header-input input {
+  	width: calc(100% - 146px);
+  }
+
+  .input-btn {
+  	width: 146px;
+  }
+
+  .user-min-menu img {
+  	width: 30px;
+  }
+
+  .header-block {
+  	display: flex;
+  	height: 50%;
+  }
+
+  .header-block-img {
+  	width: 100%;
+  	display: none;
+  }
+
+  .header-block-img img {
+  	display: none; 
+
+  }
+
+  .left-btn {
+  	left: 100px;
+  }
+
+}
+
