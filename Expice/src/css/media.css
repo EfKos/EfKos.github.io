@@ -276,6 +276,20 @@
 	margin-left: 75px;
 	}
 
+	.load-text h2::before {
+		left: -50px;
+		top: -20px;
+	}
+
+	.load-text {
+		padding-left: 30px;
+	}
+
+	.load-phone {
+	width: 60%;
+	}
+
+
 }
 
 @media (max-width: 1024px) {
@@ -336,6 +350,30 @@
     	left: 130px;
     	width: 180px;
     }
+
+    .download {
+    	min-height: 800px;
+    }
+
+    .load-text {
+	width: 50%;
+	}
+
+    .load-phone {
+	width: 70%;
+	}
+
+	.phone {
+		width: 80%;
+	}
+
+	.display {
+		width: 50%;
+		left:115px;
+		top:50px;
+	}
+
+
 
 }
 
@@ -563,8 +601,29 @@
     	width: 90%;
     }
 
+    .download {
+    	background-size: 35%;
+    	background-position: left;
 
 
+    }
+
+    .wrapper {
+    	flex-direction: column;
+    }
+
+    .load-text {
+    	margin-top: 50px;
+    }
+
+    .load-text {
+    	width: 100%;
+    }
+
+    .display {
+    	top: 30px;
+    	left: 70px;
+    }
 
 }
 

@@ -64,8 +64,8 @@
 		  </div>
 
 		  <div class="header-block-img">
-		  	<img class="plate" src="img/mainpic.png" alt="">
-		  	<img class="salad" src="img/salad.png" alt="">
+		  	<img class="plate rellax" data-rellax-speed="-3" src="img/mainpic.png" alt="">
+		  	<img class="salad rellax" data-rellax-speed="2"  src="img/salad.png" alt="">
 		  </div>
 		</div>
 	</div>
@@ -96,7 +96,7 @@
 											<!-- BOOKING -->
 
 	<section class="booking">
-		<div class="block-salad booking-salad"><img src="img/salad.png" alt=""></div>
+		<div class="block-salad booking-salad" ><img src="img/salad.png" alt=""></div>
 		<div class="container">
 			<div class="booking-block">
 				<div class="booking-line"></div>
@@ -121,7 +121,7 @@
 			</div>
 			</div>
 		</div>
-		<div class="block-salad booking-salad2"><img src="img/salad2.png" alt=""></div>
+		<div class="block-salad booking-salad2"><img class="rellax" data-rellax-speed="-1" src="img/salad2.png" alt=""></div>
 	</section>
 
 
@@ -206,6 +206,59 @@
 		</div>
 	</section>
 
+									<!-- DOWNLOAD -->
+
+	<section class="download">
+		<div class="container">
+			<div class="wrapper">
+				<div class="load-text">
+					<h2>Download app for Exciting Deals</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus auctor eget sed phasellus senectus. Ut tellus donec vestibulum tristique leo bibendum in a, tincidunt. </p>
+				<div class="btn-block">
+					<button><img src="img/icongoogle.png" alt=""><p>GET IT ON <strong>google Play</strong></p></button>
+					<button class="apple"><img src="img/iconapple.png" alt=""><p>Download on the <strong>App Store</strong></p></button>
+				</div>
+			</div>
+				<div class="load-phone"><img class="phone" src="img/phone.png" alt="">
+					<img class="display" src="img/displayphone.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+									<!-- FOOTER -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="wrapper">
+			<div class="footer-text">
+				<h3>Get notified about new amazing products</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus auctor eget sed phasellus senectus. </p>
+				<form class="header-input">
+				<input class="footer-input" type="text" name="" value="" placeholder="E-mail" >
+				<button class="input-btn" type="submit" name=""><img src="img/arrowfooter.png" alt=""></button> 
+			</form>
+
+			<ul class="main-link">
+					<a href="">
+						<li class="link">Product</li>
+					</a>
+					<a href="">
+						<li class="link">Company</li>
+					</a>
+					<a href="">
+						<li class="link">Learn more</li>
+					</a>
+					<a href="">
+						<li class="link">Get in touch</li>
+					</a>
+				</ul>
+
+			</div>
+		  </div>
+		</div>
+	</footer>
+
 
 
 
@@ -227,6 +280,11 @@
   	<!-- Подключаем библиотеку слайдер -->
 
   	<script src="slick/slick.min.js" type="text/javascript"></script>
+  	<script src="../src/js/rellax.min.js"></script>
+
+  	<script>
+  		var rellax = new Rellax('.rellax');
+  	</script>
 
   	<!-- Инициализируем слайдер -->
 
