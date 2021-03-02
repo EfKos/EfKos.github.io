@@ -1,0 +1,90 @@
+body {
+margin: 0;
+padding: 0;
+font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+line-height: 1.42;
+color: $dark;
+}
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+body, html {
+height: 100%;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+position: absolute;
+
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+
+white-space: nowrap;
+
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
+
+ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+ 
+/* Базовые настройки страницы */
+
+body, html {
+height: 100%;
+
+
+body {
+font-family: 'Proxima';
+font-weight: 300;
+line-height: 1.42;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.container {
+width: 1170px;
+margin: 0 auto;
+}
+
+.clearfix:after {
+content: "";
+display: block;
+clear: both;
+}
+
+ul, li {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+ 
+два варианта
+ 
+ну и шрифты лучше преобразуй в переменные
+ 
+всего 3 цвета на сайте сейчас или 4 максимум
+ 
+// Основные цвета на сайте
+
+$white: #ffffff;
+$snow: #fffafa;
+$yellow: #f8b43a;
+$green: #8ac03e;
+$orange: #e25028;
+$dark: #2f3234;
+
+// Цвета для выделения мышкой
+
+$darkGrey: #383838;
+$deepGreen: #80ac6d;
