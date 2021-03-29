@@ -1,0 +1,756 @@
+//<МИКСИНЫ>===============================================================================================
+@mixin anim($time,$delay){-webkit-transition: all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+@mixin anim_cubic($time, $delay) {-webkit-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-moz-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-ms-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-o-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;}
+@mixin rotate($deg){-moz-transform: rotate($deg);-ms-transform: rotate($deg);-webkit-transform: rotate($deg);-o-transform: rotate($deg);transform: rotate($deg);}
+@mixin scale($num){-moz-transform: scale($num);-ms-transform: scale($num);-webkit-transform: scale($num);-o-transform: scale($num);transform: scale($num);}
+@mixin skew($num){-webkit-transform: skewX($num);-moz-transform: skewX($num);-ms-transform: skewX($num);-o-transform: skewX($num);transform: skewX($num);}
+@mixin cnt($h){display: flex;flex-direction: column;height: $h;text-align: center;align-items: stretch;justify-content: center;}
+@mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);};
+@mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;font-size: 0;}
+@mixin flexorder($val){-webkit-box-ordinal-group: $val;-moz-box-ordinal-group: $val;-ms-flex-order: $val;-webkit-order: $val;order: $val;}
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts.scss";
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+//@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "PT Sans";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 880;
+$md1: $maxWidthContainer + 12;
+$md2: 767.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms";
+@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "datepicker";
+@import "lightgallery";
+@import "tippy";
+@import "nouislider";
+@import "popup";
+@import "header";
+@import "footer";
+@import "home";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	flex: 1 1 auto;
+	padding: 100px 30px 30px 30px;
+	display: flex;
+	// .page__side
+	&__side {
+		flex: 0 0 300px;
+		padding: 0px 20px 0px 0px;
+	}
+	// .page__item
+	&__item {
+	}
+	// .page__body
+	&__body {
+		flex: 1 1 auto;
+		min-width: 0;
+	}
+}
+//===================================================================================================================================
+
+.tabs-block {
+	margin: 0px 0px 50px 0px;
+	// .tabs-block__nav
+	&__nav {
+		display: flex;
+		margin: 0px -2px;
+	}
+	// .tabs-block__item
+	&__item {
+		flex: 0 1 33.333%;
+		margin: 0px 2px;
+		background-color: #7a956b;
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		&._active {
+			background-color: #77608d;
+		}
+	}
+	// .tabs-block__body
+	&__body {
+		padding: 20px 0px 0px 0px;
+	}
+	// .tabs-block__block
+	&__block {
+	}
+}
+//========================================================================================================================================================
+
+.spollers-block {
+	margin: 0px 0px 50px 0px;
+	// .spollers-block__item
+	&__item {
+		margin: 0px 0px 20px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	// .spollers-block__title
+	&__title {
+		background-color: #794f45;
+		cursor: pointer;
+		padding: 20px 70px 20px 20px;
+		position: relative;
+		&::before {
+			content: "";
+			width: 20px;
+			background-color: #fff;
+			height: 2px;
+			transition: transform 0.3s ease 0s;
+			transform: translate(0, -50%) rotate(-45deg);
+			position: absolute;
+			right: 15px;
+			top: 50%;
+		}
+		&::after {
+			content: "";
+			width: 20px;
+			background-color: #fff;
+			height: 2px;
+			transition: transform 0.3s ease 0s;
+			transform: translate(0, -50%) rotate(45deg);
+			position: absolute;
+			right: 29px;
+			top: 50%;
+		}
+		&._active {
+			&::before {
+				transform: translate(0, -50%) rotate(45deg);
+			}
+			&::after {
+				transform: translate(0, -50%) rotate(-45deg);
+			}
+		}
+	}
+	// .spollers-block__body
+	&__body {
+		display: none;
+		padding: 20px 0px 0px 0px;
+	}
+}
+//========================================================================================================================================================
+
+.form {
+	margin: 0px 0px 50px 0px;
+	// .form__line
+	&__line {
+		margin: 0px 0px 20px 0px;
+	}
+	// .form__label
+	&__label {
+		display: inline-block;
+		margin: 0px 0px 15px 0px;
+	}
+}
+
+//========================================================================================================================================================
+.slider {
+	margin: 0px 0px 50px 0px;
+}
+//========================================================================================================================================================
+.text {
+	transform: translate(0px, 100px);
+	opacity: 0;
+	transition: all 0.3s ease 0s;
+	margin: 0px 0px 50px 0px;
+	a {
+		color: red;
+	}
+	&._active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+}
+
+//========================================================================================================================================================
+
+.price {
+	// .price__range
+	&__range {
+	}
+	// .price__inputs
+	&__inputs {
+		display: flex;
+		input {
+			margin: 0px 10px 0px 0px;
+		}
+	}
+}
+
+//========================================================================================================================================================
+.gallery-block {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -10px;
+	// .gallery-block__item
+	&__item {
+		flex: 0 1 33.333%;
+		margin: 0px 0px 20px 0px;
+		padding: 0px 10px;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+.header {
+	padding: 29px 0 33px 0;
+	@media (max-width: $md2+px){
+			padding: 5px 0 5px 0;
+	}
+}
+.header-top {
+	@include flexbox();
+	justify-content:space-between;
+	@media (max-width: $md2+px){
+		justify-content: flex-end;
+		padding: 25px 0 0 0;
+	}
+	@media (max-width: $md4+px){
+		padding: 15px 0 0 0;
+	}
+	&__link {
+		position: relative;
+		z-index: 11;
+		font-size:15px;
+		text-transform:uppercase;
+		color:#000;
+		font-family: 'AkzidenzGrotesk' sans-serif;
+		text-decoration:underline;
+		font-weight:900;
+		@media (max-width: $md4+px){
+			font-size: 12px;
+		}
+	}
+}
+.header-top-lang {
+	@include flexbox();
+	@media (max-width: $md2+px){
+		margin: 0px 0px 15px 0;
+	}
+	&__item {
+		display:block;
+		font-size: 14px;
+		line-height1:19px;
+		color:#000;
+		text-transform: uppercase;
+		font-family: 'Bebas Neue' ;
+		letter-spacing:1px;
+		padding: 5px 4px;
+		margin-right: 10px;
+		&.active {
+			background-color:#000;
+			color:#fff;
+		}
+	}
+}
+.header-bottom {
+	margin: -15px 0 0 0;
+	@include flexbox();
+	align-items: center;
+	@media (max-width: $md2+px){
+		margin: -37px 0 0 0;
+	}
+	@media (max-width: $md4+px){
+		margin: -27px 0 0 0;
+	}
+	&__column {
+		flex:0 0 33.333%;
+	}
+}
+.header-bottom-menu {
+	&__link {
+		font-family: 'AkzidenzGrotesk' sans-serif;
+		color: #000;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight:900;
+	}
+}
+.header-bottom-menu-list {
+	@include flexbox();
+	justify-content: space-between;
+	@media (max-width: $md2+px){
+		display: block;
+		li {
+			margin: 0 0 15px 0 !important;
+			
+		}
+	}
+}
+.header-logo {
+	display: block;
+	text-align: center;
+	position: relative;
+	z-index: 11;
+	&__text {
+		display: block;
+		font-family:'Bebas Neue';
+		font-size: 10px;
+		text-transform: uppercase;
+		letter-spacing: 8px;
+		color: #000;
+		font-weight: 800;
+		@media (max-width: $md2+px){
+			font-size: 8px;
+		}
+		@media (max-width: $md4+px){
+			letter-spacing: 5px;
+		}
+	}
+	&__image {
+		display: inline-block;
+		padding: 13px 0 22px 0;
+		@media (max-width: $md2+px){
+			margin: 2px 0 5px 0;
+			img {width: 150px;}
+		}
+		@media (max-width: $md4+px){
+			margin: 0 0 2px 0;
+			img{width: 100px;}
+		}
+	}
+  }
+
+//================================================================================================
+.ibg{background-position: center; background-size: cover; background-repeat: no-repeat;
+	img {display: none;}
+}
+
+
+.private {
+	@include flexbox();
+	background-color: #000;
+	margin: 0 0 75px 0;
+	@media (max-width: $md2+px){
+		margin: 0 0 40px 0;
+	}
+	&__column {
+		flex:0 0 50%;
+		@media (max-width: $md2+px){
+			flex:1 1 100%;
+			&:first-child {
+				display: none;
+			}
+			
+		}
+		
+
+	}
+	&__image {
+		height: 100%;
+	}
+}
+.private-body {
+	.private-body-content {
+		max-width: 305px;
+	}
+	padding: 75px 20px 75px 60px;
+	@media (max-width: $md1+px){
+		padding: 50px 20px 30px 30px;
+	}
+	&__title {
+		font-size: 50px;
+		text-transform: uppercase;
+		color: #fff;
+		font-family: 'AkzidenzGrotesk' sans-serif;
+		letter-spacing: 5px;
+		margin: 0 0 30px 0;
+		@media (max-width: $md1+px){
+			font-size: 35px;
+			margin: 0 0 20px 0;
+		}
+	}
+	&__text {
+		font-size: 15px;
+		line-height: 25px;
+		color: #fff;
+		margin: 0 0 50px 0;
+		@media (max-width: $md1+px){
+			max-width: 0 0 30px 0;
+		}
+	}
+}
+.private-body-buttons {
+	&__item {}
+	&__link {
+		font-family:'Bebas Neue';
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 15px;
+		text-decoration: underline;
+		margin: 0 0 0 15px;
+		letter-spacing: 1.5px;
+	}
+}
+
+//=================================================================================================
+
+
+.products {
+	margin: 0 0 40px 0;
+	@media (max-width: $md2+px){
+		margin: 0;
+	}
+	&__column {
+		flex: 0 0 25%;
+		margin: 0 0 40px 0;
+		@media (max-width: $md2+px){
+			flex:0 0 50%;
+		}
+		@media (max-width: 380px){
+				flex: 1 1 100%;
+		}
+	}
+}
+.products-body {
+	@include flexbox();
+	@media (max-width: $md2+px){
+		flex-wrap: wrap;
+	}
+}
+.products-item {
+	@include flexbox();
+	flex-direction: column;
+	height: 100%;
+	&__image {
+		display: block;
+		padding: 0 0 100% 0;
+		margin: 0 0 25px 0;
+		@media (max-width: 380px){
+			margin: 0 0 15px 0;
+		}
+	}
+	&__title {
+		height: 50px;
+		padding: 0 10px 0 0;
+		display: block;
+		max-width: 185px;
+		font-size: 25px;
+		font-family: 'AkzidenzGrotesk' sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		color: #000;
+		margin: 0 0 30px 0;
+		@media (max-width: 380px){
+			max-width: none;
+			height: auto;
+			overflow: visible;
+			margin: 0 0 20px 0;
+		}
+
+	}
+
+	&__text {
+		flex:1 1 auto;
+		padding: 0 10px 0 0;
+		max-width: 185px;
+		font-size: 15px;
+		line-height: 25px;
+		margin: 0 0 25px 0;
+		@media (max-width: 380px){
+			max-width: none;
+			margin: 0 0 15px 0;
+		}
+
+	}
+	&__btn {
+		margin: 0 0 29px 0;
+	}
+	&__link {
+		font-family:'Bebas Neue';
+		text-transform: uppercase;
+		color: #000;
+		text-decoration: underline;
+		font-size: 15px;
+		line-height: 25px;
+		letter-spacing: 1.5px;
+
+	}
+}
+
+//================================================================================================
+
+
+.why {
+}
+.why-top {
+	@include flexbox();
+	background-color: #000;
+	&__column {
+		flex:0 0 50%;
+		@media (max-width:$md1+px){
+			flex:1 1 100%;
+			&:last-child{
+				display: none;
+			}
+		}
+	}
+	&__text {
+		text-align:right;
+		font-family: 'AkzidenzGrotesk' sans-serif;
+		font-size: 50px;
+		line-height: 25px;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		color: #ffffff;
+		padding:50px 60px 50px 0;
+		@media (max-width:$md1+px){
+			padding: 30px 0;
+			text-align: center;
+			font-size: 40px;
+		}
+		@media (max-width:$md2+px){
+			padding: 20px 0;
+			text-align: center;
+			font-size: 30px;
+		}
+
+	}
+	&__image {
+		height: 100%;
+	}
+}
+
+.why-body {
+	padding: 50px 0 0 0;
+	background-color: #ebebeb;
+	@media (max-width:$md4+px){
+		padding: 30px 0 0 0;
+	}
+	.why-body-row {
+		@include flexbox();
+		flex-wrap: wrap
+	}
+	&__column {
+		flex:0 0 50%;
+		margin: 0 0 50px 0;
+		@media (max-width:$md1+px){
+		flex:1 1 100%;
+		}
+		@media (max-width:$md4+px){
+			margin: 0 0 30px 0;
+		}
+	}
+
+
+}
+
+.why-body-item {
+	@include flexbox();
+	&__icon {
+		flex:0 0 100px;
+		height: 100px;
+		background-color: #000;
+		@include flexbox();
+		justify-content: center; align-items: center;
+		@media (max-width:$md4+px){
+			flex:0 0 80px;
+			height: 80px;
+			padding: 15px;
+			img{
+				max-width: 100%;
+			}
+		}
+	}
+}
+.why-body-item-body {
+	@include flexbox();
+	flex-direction: column;
+	flex:1 1 100%;
+	padding: 0 0 0 11px;
+	&__title {
+		flex:1 1 auto;
+		font-family: 'AkzidenzGrotesk' sans-serif;
+		font-size: 25px;
+		color: #000;
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		font-weight: 700;
+		@media (max-width:$md4+px){
+			font-size:20px; 
+		}
+
+	}
+	&__text {
+		font-size: 15px;
+		padding: 0 15px 0 0;
+		line-height: 25px;
+		color: #000;
+	}
+}
+
+//===============================================================================
+
+
+.contacts {
+	padding: 80px 0 0 0;
+	@media (max-width:$md2+px){
+		padding: 30px 0 0 0;
+	}
+	&__title {
+		font-family: 'AkzidenzGrotesk' sans-serif;
+		font-size: 50px;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-weight: 900;
+		margin: 0 0 30px 0;
+	}
+}
+.contacts-top {
+}
+
+.contacts-body {
+	@include flexbox();
+	flex-wrap: wrap;
+	&__column {
+		flex:0 0 50%;
+		margin: 0 0 20px 0;
+		@media (max-width:$md2+px){
+			flex:1 1 100%;
+		}
+	}
+	&__item {
+		font-size: 15px;
+		color: #000;
+		display: inline-block;
+		line-height: 27px;
+		padding: 0 0 0 35px;
+	}
+	&__itme--1 {
+		background: url('../../img/icons/01.png') left no-repeat;
+	}
+	&__itme--2 {
+		background: url('../../img/icons/02.png') left no-repeat;
+	}
+	&__itme--3 {
+		background: url('../../img/icons/03.png') left no-repeat;
+	}
+}
+.contacts-social {
+	@include flexbox();
+	&__item {
+		margin:0 30px 0 0;
+		&:last-child{margin: 0 0 0 0;}
+	}
+	&__item--1 {}
+	&__item--2 {}
+	&__item--3 {}
+	&__item--4 {}
+}
+.contacts-content {
+	@include flexbox();
+	background-color: #000;
+	@media (max-width:$md2+px){
+		display: block;
+	}
+	&__column {
+		flex:0 0 50%;
+	}
+	&__map {
+		height: 100%;
+		@media (max-width:$md2+px){
+			height: 100%;
+		}
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+.contacts-content-form {
+	padding: 55px 60px;
+	@media (max-width:$md2+px){
+		padding: 30px;
+	}
+
+	&__title {
+		font-family: 'AkzidenzGrotesk' sans-serif;
+		font-size: 25px;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-weight: 900;
+		margin: 0 0 30px 0;
+		color: #fff;
+	}
+	&__btn {}
+}
+.contacts-content-form-body {
+	max-width: 375px;
+	@media (max-width:$md2+px){
+		max-width: none;
+	}
+}
+.contacts-content-form-line {
+	margin: 0 0 25px 0;
+}
+
+
+
+
+
