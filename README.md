@@ -1,6 +1,5 @@
 
 # Константин Ефремов Мои Проекты
-Первый сайт тест
 
 [DecBase](https://efkos.github.io/Lending_Decbase/src/ "Проект лендинг") - Первый проект лендинг на Bootstrap
 
