@@ -11,6 +11,6 @@
 
 [Bycicle](https://efkos.github.io/Bycicle/index.html "Проект лендинг") - Крутой лендинг гибкий и адаптивный готовый проект
 
-[Игра на CSS](efkos.github.io/gameCSS/index.html) - Простенькая игра на CSS
+[Игра на CSS](https://efkos.github.io/gameCSS/index.html) - Простенькая игра на CSS
 
 
