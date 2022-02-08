@@ -13,5 +13,5 @@
 
 [Игра на CSS](https://efkos.github.io/gameCSS/index.html) - Простенькая игра на CSS
 
-[Polina Antsifirova](https://efkos.github.io/Polina Antsifirova/index.html) - Сайт-портфолио по заказу
+[Polina Antsifirova](https://efkos.github.io/PolinaAntsifirova/index.html) - Сайт-портфолио по заказу
 
