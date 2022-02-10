@@ -1,0 +1,541 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+//@import "fonts";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@font-face {
+	font-family: "APD";
+	src: url("../fonts/AngleciaProDisplayRegular.eot");
+	src: local("☺"), url("../fonts/AngleciaProDisplayRegular.woff") format("woff"),
+		url("../fonts/AngleciaProDisplayRegular.ttf") format("truetype"),
+		url("../fonts/AngleciaProDisplayRegular.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "APD";
+	src: url("../fonts/AngleciaProDisplayBold.eot");
+	src: local("☺"), url("../fonts/AngleciaProDisplayBold.woff") format("woff"),
+		url("../fonts/AngleciaProDisplayBold.ttf") format("truetype"),
+		url("../fonts/AngleciaProDisplayBold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
+
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+//@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "APD", sans-serif;
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1230px;
+$md1: $maxWidthContainer + 12px;
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	font-size: 30px;
+	background-color: #e5e5e5;
+	color: #000000;
+	font-weight: 400;
+	a {
+		color: inherit;
+	}
+	font-family: $fontFamily;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	@media (max-width: $md1) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</header>===========================================================================================================
+
+.header {
+	padding: 85px 0 45px 0;
+	&__title {
+		font-size: 48px;
+		line-height: calc(56 / 48 * 100%);
+		margin: 0 0 45px 0;
+	}
+	&__line {
+		width: 100%;
+		border-bottom: 1px dashed #000000;
+		margin: 150px 0 0 0;
+	}
+
+	&__menu {
+	}
+}
+
+.active__menu {
+	border-bottom: 3px solid #000000;
+}
+
+.container {
+	&__header {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+}
+
+.menu {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		flex: 1 1 auto;
+	}
+
+	&__link {
+		font-size: 30px;
+		line-height: calc(35 / 30 * 100%);
+		margin: 0 0 45px 0;
+	}
+
+	&__link:hover {
+		opacity: 0.5;
+		transition: all ease-in-out 0.3s;
+	}
+}
+
+.menu__item:not(:last-child) {
+	margin: 0 145px 0 0;
+}
+
+@media (max-width: $md2) {
+	.header {
+		padding: 40px 0;
+		&__title {
+			margin: 0 0 40px 0;
+			text-align: center;
+		}
+
+		&__line {
+			margin: 45px 0 0 0;
+		}
+	}
+
+	.menu {
+		&__item {
+			width: 100%;
+			flex: 1 1 50%;
+			padding: 15px 15px;
+			text-align: center;
+		}
+	}
+
+	.menu__item:not(:last-child) {
+		margin: 0;
+	}
+}
+
+@media (max-width: $md4) {
+	.menu {
+		&__item {
+			flex: 1 1 100%;
+		}
+	}
+}
+
+//</home__slider>===========================================================================================================
+
+.home {
+	&__slide {
+	}
+}
+.block {
+	&__image {
+		display: flex;
+		justify-content: center;
+	}
+}
+.slide {
+	&__images {
+		width: 50%;
+		height: 50%;
+		text-align: center;
+	}
+}
+
+//</contacts>===========================================================================================================
+
+.block {
+	&__contacts {
+		padding: 0 0 100px 0;
+	}
+}
+.container {
+	&__contacts {
+	}
+}
+
+.contacts {
+	&__items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__icons {
+	}
+}
+
+.contacts__icons a:not(:last-child) {
+	margin: 0 30px 0 0;
+}
+
+.contacts__icons a:hover {
+	opacity: 0.5;
+	transition: all ease-in-out 0.3s;
+}
+
+.cotacts {
+	&__item {
+		font-size: 24px;
+		line-height: calc(28 / 24 * 100%);
+	}
+}
+
+.cotacts__item:not(:last-child) {
+	margin: 0 0 50px 0;
+}
+
+@media (max-width: $md4) {
+	.cotacts__item {
+		font-size: 16px;
+	}
+
+	.cotacts__item:not(:last-child) {
+		margin: 0 0 25px 0;
+	}
+}
+
+//</price>===========================================================================================================
+
+.price {
+	&__container {
+	}
+
+	&__body {
+		padding: 0 50px 104px 50px;
+	}
+
+	&__title {
+		margin: -20px 0 20px 0;
+		text-align: center;
+		font-size: 26px;
+		line-height: calc(30 / 26 * 100%);
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	&__items:not(:last-child) {
+		padding: 0 0 100px 0;
+	}
+
+	&__item-text {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin: 45px 0 0 0;
+	}
+
+	&__item {
+		flex: 0 0 50%;
+		position: relative;
+	}
+
+	&__item-image {
+		padding: 0 0 60% 0;
+		max-width: 100%;
+	}
+
+	&__item-image img {
+		padding: 0 50px;
+	}
+	&__items-reverse {
+		flex-direction: row-reverse;
+	}
+}
+
+.item {
+	&__element {
+		text-align: center;
+	}
+}
+
+.item__element:not(:last-child) {
+	margin: 0 0 45px 0;
+}
+
+.item {
+	&__title {
+		font-weight: 700;
+		line-height: calc(35 / 30 * 100%);
+	}
+
+	&__price {
+		font-size: 25px;
+		line-height: calc(30 / 25 * 100%);
+	}
+
+	&__text {
+		font-size: 25px;
+		line-height: calc(30 / 25 * 100%);
+	}
+}
+
+.item__text::before {
+	content: "-";
+	position: absolute;
+	left: 0px;
+	display: block;
+	width: 20px;
+	width: 20px;
+	background: url("/img/price/Ellipse.svg") center center no-repeat;
+}
+
+.item {
+	&__line {
+		width: 70%;
+		border-bottom: 1px dashed #000000;
+	}
+}
+
+.item__element-last {
+	margin: 32px 0 0 0;
+	justify-content: space-around;
+}
+
+@media (max-width: $md2) {
+	.item {
+		&__element {
+			text-align: center;
+			font-size: 20px;
+			padding: 0;
+		}
+	}
+
+	.price {
+		&__item-image {
+			padding: 0 0 40% 0;
+		}
+
+		&__item-image img {
+			padding: 0 15px;
+		}
+	}
+}
+
+@media (max-width: $md3) {
+	.price {
+		&__items {
+		}
+
+		&__item {
+			flex: 0 1 100%;
+		}
+
+		&__item-text {
+			margin: 30px 0 30px 0;
+		}
+		&__item-image {
+			padding: 0 0 100% 0;
+			max-width: 100%;
+		}
+
+		&__item-image img {
+			padding: 0;
+		}
+	}
+}
+
+//<contacts>====================================================================================================
+
+.contacts {
+	&__container {
+	}
+
+	&__body {
+		padding: 0 15px 163px 15px;
+	}
+
+	&__title {
+		margin: -20px 0 20px 0;
+		text-align: center;
+		font-size: 26px;
+		line-height: calc(30 / 26 * 100%);
+	}
+
+	&__items {
+		margin: 138px 0 0 0;
+	}
+
+	&__text {
+		font-size: 23px;
+		line-height: calc(41 / 23 * 100%);
+		letter-spacing: 0.34em;
+		color: #000000;
+		text-align: center;
+	}
+
+	&__text:not(:last-child) {
+		margin: 0 0 100px 0;
+	}
+}
+
+@media (max-width: $md2) {
+	.contacts {
+		&__text {
+			font-size: 18px;
+		}
+	}
+}
+
+//<aboutme>====================================================================================================
+.aboutme {
+	&__container {
+	}
+
+	&__title {
+		margin: -20px 0 20px 0;
+		text-align: center;
+		font-size: 26px;
+		line-height: calc(30 / 26 * 100%);
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		padding: 0 0 141px 0;
+		align-items: center;
+	}
+
+	&__image {
+		max-width: 550px;
+		width: 100%;
+		padding: 0 0 60% 0;
+		margin: 46px 0 82px 0;
+	}
+
+	&__text {
+		font-size: 23px;
+		line-height: calc(41 / 23 * 100%);
+		text-align: center;
+		letter-spacing: 0.05em;
+	}
+}
+
+@media (max-width: $md3) {
+	.aboutme {
+		&__text {
+			font-size: 18px;
+		}
+		&__image {
+			padding: 0 0 90% 0;
+		}
+	}
+}
+//<porfolio>====================================================================================================
+
+.porfolio {
+	&__container {
+	}
+
+	&__body {
+		padding: 0 40px 102px 40px;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		flex: 1 1 33.333%;
+		margin: 0 0 60px 0;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media (max-width: $md4) {
+	.porfolio {
+		&__items {
+			justify-content: center;
+		}
+	}
+}
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+
+//===================================================================================================================================
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+.slider {
+	margin: 0px 0px 50px 0px;
+}
