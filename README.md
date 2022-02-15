@@ -13,7 +13,7 @@
 
 [Игра на CSS](https://efkos.github.io/gameCSS/index.html) - Простенькая игра на CSS
 
-[Polina Antsifirova](https://efkos.github.io/PolinaAntsifirova/) - Сайт-портфолио по заказу
+[Polina Antsifirova](https://efkos.github.io/PolinaAntsifirova/index.html) - Сайт-портфолио по заказу
 
 [Relvise](https://efkos.github.io/Relvise/index.html) - Одностраничный сайт
 
