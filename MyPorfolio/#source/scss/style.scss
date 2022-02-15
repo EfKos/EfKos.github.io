@@ -1,0 +1,353 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+
+//</Подключаем шрифты>=======================================================================================
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@font-face {
+	font-family: "APD";
+	src: url("../fonts/AngleciaProDisplayRegular.eot");
+	src: local("☺"), url("../fonts/AngleciaProDisplayRegular.woff") format("woff"),
+		url("../fonts/AngleciaProDisplayRegular.ttf") format("truetype"),
+		url("../fonts/AngleciaProDisplayRegular.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "APD";
+	src: url("../fonts/AngleciaProDisplayBold.eot");
+	src: local("☺"), url("../fonts/AngleciaProDisplayBold.woff") format("woff"),
+		url("../fonts/AngleciaProDisplayBold.ttf") format("truetype"),
+		url("../fonts/AngleciaProDisplayBold.svg") format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
+//<Иконочные шрифты>==========================================================================================
+
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "APD";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1440;
+$md1: $mw + 12px;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+$bg-block: #778899;
+$bg-main: #faf0e6;
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+	background-color: $bg-main;
+	color: #000;
+	font-size: 20px;
+	&.lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	&.loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	@media (max-width: $md1) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+@import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+
+//====================================================================================================
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+//</Header>====================================================================================================
+
+.header {
+	background-color: $bg-block;
+	margin: 0 0 100px 0;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.header__container {
+	padding: 0 15px;
+}
+.header__body {
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__img {
+	display: block;
+	padding: 20% 0 0 0;
+	width: 200px;
+}
+
+.header__img img {
+	border-radius: 30%;
+	transition: all 0.7s ease 0s;
+}
+
+.header__img img:hover {
+	border-radius: 50%;
+}
+
+.menu {
+	padding: 5px 0;
+}
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.menu__item {
+}
+.menu__item:not(:last-child) {
+	margin: 0 40px 0 0;
+}
+.menu__link {
+	font-size: 30px;
+	font-weight: 600;
+	color: #000;
+	line-height: calc(24 / 14 * 100%);
+	transition: all 1s ease 0s;
+}
+
+.menu__link:hover {
+	color: #808000;
+	font-size: 40px;
+	padding: 0 40px;
+}
+
+@media (max-width: 992px) {
+	.menu__item {
+		text-align: center;
+		flex: 1 1 50%;
+	}
+
+	.menu__item:not(:last-child) {
+		margin: 0;
+	}
+
+	.header__img {
+		padding: 0 0 40% 0;
+	}
+}
+
+@media (max-width: 990px) {
+	.header {
+		margin: 0 0 50px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.menu__link {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 480px) {
+	.menu__item {
+		flex: 1 1 100%;
+	}
+}
+
+//</portfolio>====================================================================================================
+
+.portfolio {
+	padding: 20px 0 20px 0;
+	margin: 0 0 80px 0;
+}
+
+.portfolio__body {
+	border-radius: 50px;
+	background-color: $bg-block;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.portfolio__title {
+	margin: 20px 0 20px 0;
+	font-size: 30px;
+	text-align: center;
+}
+.portfolio__items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+}
+.item-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin: 0 0 0 15px;
+}
+
+.portfolio__item {
+	flex: 0 1 25%;
+	width: 300px;
+	padding: 0 0 50% 0;
+	transition: all 1s ease 0s;
+	border: 5px solid #000;
+	border-radius: 10px;
+	margin: 10px 0;
+}
+
+.portfolio__item:hover {
+	padding: 0 0 60% 0;
+}
+
+.item-body:not(:last-child) {
+}
+
+.portfolio__img {
+}
+
+.portfolio__name {
+	margin: 15px 0 5px 0;
+	font-size: 30px;
+}
+
+.portfolio__item:hover .portfolio__name {
+	font-size: 40px;
+}
+
+//</aboutme>====================================================================================================
+
+.aboutme {
+	padding: 20px 0 50px 0;
+	display: flex;
+	&__body {
+		border-radius: 50px;
+		background-color: $bg-block;
+		width: 100%;
+		padding: 20px 50px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	}
+
+	&__title {
+		margin: 0 0 20px 0;
+		font-size: 30px;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 24px;
+		line-height: calc(32 / 24 * 100%);
+		padding: 0 0 15px 0;
+	}
+}
+
+@media (max-width: 590px) {
+	.aboutme__body {
+		width: 100%;
+	}
+
+	.aboutme__text {
+		font-size: 18px;
+	}
+}
+
+//</contacts>====================================================================================================
+
+.contacts {
+	padding: 20px 0 50px 0;
+	margin: 50px 0 0 0;
+
+	&__body {
+		border-radius: 50px;
+		background-color: $bg-block;
+		width: 100%;
+		padding: 20px 50px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	}
+
+	&__title {
+		margin: 0 0 20px 0;
+		font-size: 30px;
+		text-align: center;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item {
+		color: #000;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__item:hover {
+		opacity: 0.5;
+		text-decoration: underline;
+	}
+
+	&__item:not(:last-child) {
+		margin: 0 0 15px 0;
+	}
+}
+
+@media (max-width: 740px) {
+	.contacts {
+		margin: 10px 0 0 0;
+	}
+}
+@media (max-width: 590px) {
+	.contacts__body {
+		width: 100%;
+	}
+}
