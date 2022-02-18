@@ -17,3 +17,4 @@
 
 [Relvise](https://efkos.github.io/Relvise/index.html) - Одностраничный сайт
 
+ [GoCorona](https://efkos.github.io/Gocorna/index.html) - Одностраничный сайт
