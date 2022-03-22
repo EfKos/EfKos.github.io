@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,AAAC,CACR,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,MAAM,CAevB,AAVC,AAAD,cAAO,AAAC,CACP,OAAO,CAAE,IAAI,CAGb",
+    "sources": [
+        "../scss/pagging.scss"
+    ],
+    "names": [],
+    "file": "pagging.min.css"
+}
